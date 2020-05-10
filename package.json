@@ -1,0 +1,18 @@
+{
+  "name": "offenedatenberatung.de",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "postcss-cli": "^7",
+    "tailwind-heropatterns": "0.0.8",
+    "tailwindcss-spaced-items": "^0.1.0"
+  },
+  "scripts": {
+    "start": "hugo --gc"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.5",
+    "tailwindcss": "^1.4"
+  }
+}
