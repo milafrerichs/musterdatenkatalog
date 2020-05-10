@@ -1,0 +1,99 @@
+/* Base - Variables: tailwind-config.js */
+@tailwind base;
+
+a {
+	@apply text-civic font-bold no-underline;
+}
+a:hover {
+  @apply underline;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: Futura,Trebuchet MS,Arial Black,Arial Bold,Arial,sans-serif;
+}
+
+@tailwind components;
+/* Site Specific */
+@tailwind utilities;
+
+.markdown {
+	@apply text-lg leading-normal text-gray-800;
+}
+.markdown a {
+  @apply no-underline;
+}
+.markdown a:hover {
+  @apply underline;
+}
+.markdown>*+*, .markdown li+li, .markdown li>p+p {
+  @apply mt-4;
+}
+.markdown h2 {
+  @apply mb-2 mt-10 text-xl text-gray-800 leading-tight;
+}
+.markdown h3 {
+  @apply -mb-2 mt-6 text-lg text-gray-800 leading-tight;
+}
+.markdown code {
+  font-size: .875rem;
+  display: inline;
+  background-color: #f1f5f8;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  color: #fff;
+}
+
+.markdown pre code {
+  display: block;
+  background-color: #22292f;
+  padding: 1rem;
+  border-radius: .25rem
+}
+
+.btn {
+	@apply text-lg text-white bg-civic font-bold text-center rounded-sm p-4 w-1/2;
+}
+.btn a{
+	@apply text-white no-underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+}
+
+.divider::after,
+.divider::before {
+  content: "";
+  height: 1px;
+  background-color: #000;
+  flex-grow: 1;
+}
+.divider::before {
+  margin-right: 1rem;
+}
+.divider::after {
+  margin-left: 1rem;
+}
+.shadow-pop {
+  box-shadow: 5px 5px 37px rgb(185, 197, 199);
+  -webkit-box-shadow: 5px 5px 37px rgb(185, 197, 199);
+}
+.h-512 {
+  height: 512px;
+}
+.cover-center {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+.projects:hover .hover-show {
+  display: block;
+}
+.vega-embed {
+	width: 100%;
+}

@@ -1,0 +1,15 @@
+footer.font-sans.md:py-8.px-4
+  .mx-auto.container.overflow-hidden.flex.flex-col.justify-between.text-center
+    .w-full.flex-grow.md:flex.md:items-center.md:w-auto
+      .text-sm.md:flex-grow
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.footer }}
+          a.block.mt-4.md:inline-block.md:mt-0.text-grey-darker.hover:text-grey-dark.mr-4 class="{{ if $currentPage.IsMenuCurrent "main" . }}underline{{else}}no-underline{{end}}" href="{{.URL}}" {{.Name}}
+        {{ end }}
+    .text-xs.pt-2.mt-2.text-grey-darker.text-center ©2020 Civic Vision. All rights reserved.
+    ul.text-grey-dark.list-reset.font-thin.flex.text-left.justify-center
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.sub_footer }}
+        li
+          a.inline-block.text-xs.py-2.px-3.text-grey.hover:text-grey-light.no-underline href="{{.URL}}" {{.Title}}
+      {{ end }}

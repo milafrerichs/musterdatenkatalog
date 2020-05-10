@@ -1,0 +1,51 @@
+---
+
+---
+<h1 class="text-center text-4xl">Musterdatenkatalog - Report</h1>
+
+<div class="mt-8 w-2/3 mx-auto p-4 bg-gray-400">
+	Was ist der Musterdatenkatalog?
+</div>
+
+<div class="px-2 mt-8">
+	<div class="flex -mx-2">
+		<div class="w-1/3 pr-2">
+			<div class="bg-gray-200 py-6">
+				<div class="text-6xl text-center text-gray-800 font-bold">
+					313
+				</div>
+				<div class="text-sm text-center text-gray-600 font-light">
+					Musterdatensätze
+				</div>
+			</div>
+		</div>
+		<div class="w-1/3 px-2">
+			<div class="bg-gray-200 py-6">
+				<div class="text-6xl text-center text-gray-800 font-bold">
+					39
+				</div>
+				<div class="text-sm text-center text-gray-600 font-light">
+					Kommunen in NRW
+				</div>
+			</div>
+		</div>
+		<div class="w-1/3 px-2">
+			<div class="bg-gray-200 py-6">
+				<div class="text-6xl text-center text-gray-800 font-bold">
+					2370
+				</div>
+				<div class="text-sm text-center text-gray-600 font-light">
+					Datensätze
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mt-12 flex ">
+	<div class="w-1/2">
+		{{<viz data="viz/potential" id="staedte-potential" >}}
+	</div>
+	<div class="w-1/2">
+		{{<viz data="viz/staedte-musterdatensaetze" id="staedte-md" >}}
+	</div>
+</div>

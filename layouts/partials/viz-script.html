@@ -1,0 +1,35 @@
+<script type="text/javascript">
+	viz = function() {
+    {{ $vizmode := "vega-lite" }}
+    {{ if .Get "mode" }}
+    {{ $vizmode := .Get "mode" }}
+    {{ else }}
+    {{ $vizmode := "vega-lite" }}
+    {{ end }}
+    {{ $url := (printf "%s%s%s" "data/" (.Get "data") ".json")}}
+    {{ $dataJ := getJSON $url }}
+    vizSpec = {{$dataJ}};
+    opt = { mode: "{{$vizmode | safeJS}}", actions: false };
+    var width, clientWidth;
+    {{ if .Get "width" }}
+    width = parseInt({{ .Get "width" | safeJS }});
+    {{ end }}
+    clientWidth = document.getElementById('{{.Get "id" | safeJS}}').clientWidth;
+    if(!width || clientWidth < width) {
+      width = clientWidth;
+    }
+    vizSpec['width'] = width;
+    vizSpec["autosize"] = {
+    "type": "fit",
+    "contains": "padding"
+    };
+    vegaEmbed('#{{.Get "id" | safeJS}}', vizSpec, opt, function(error, result) {
+    return;
+    });
+  }
+  if(window.addEventListener){
+  window.addEventListener('load', viz);
+  }else{
+  window.attachEvent('onload', viz);
+  }
+</script>

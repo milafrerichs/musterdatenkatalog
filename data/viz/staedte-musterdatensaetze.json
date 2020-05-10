@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Bar chart with text labels. Apply scale padding to make the frame cover the labels.",
+	"padding": { "top": 50 },
+  "data": {
+    "url": "https://gist.githubusercontent.com/milafrerichs/5d97cf3cab9214f7ceac63b5341ae197/raw/1398c403578ce6a7dd318ccc51c2f31cac862024/cities-musterdatensaetze.csv",
+    "format": {"parse": {"Sum of has": "number"}}
+  },
+  "encoding": {
+    "y": {
+      "field": "city",
+      "type": "ordinal",
+      "sort": {"field": "Sum of has", "order": "descending"},
+      "title": ""
+    },
+    "x": {
+      "field": "Sum of has",
+      "type": "quantitative",
+      "scale": {"padding": 5},
+      "title": "Musterdatensätze",
+			"axis": {
+				"ticks": false,
+				"grid": false
+			}
+    }
+  },
+  "layer": [
+    {"mark": "bar" },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 3},
+      "encoding": {"text": {"field": "Sum of has", "type": "quantitative"}}
+    }
+  ],
+	"config": {
+		"bar": {
+			"color": "#aecfc8"
+		},
+		"view": {
+			"stroke": "transparent"
+		}
+	}
+}

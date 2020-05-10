@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 300,
+  "data": {
+    "url": "https://gist.githubusercontent.com/milafrerichs/5d97cf3cab9214f7ceac63b5341ae197/raw/7466ce025f8224322eb081df3e22d0782a8fee09/cities-potential-tidy.csv",
+    "format": {"parse": {"value": "number"}}
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.variable === 'vorhanden', datum.value, 0)",
+      "as": "siteOrder"
+    }
+  ],
+  "mark": {"type": "bar", "tooltip": true},
+  "encoding": {
+    "y": {
+      "field": "city",
+      "type": "ordinal",
+      "sort": {"field": "siteOrder", "order": "descending"},
+      "axis": {"title": ""},
+      "stack": "normalize"
+    },
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Musterdatensätze"
+    },
+    "color": {
+      "field": "variable",
+      "type": "nominal",
+      "title": "Musterdatensätze",
+      "scale": {"range": ["#bebbda", "#aecfc8"]},
+      "legend": { "orient": "top" }
+    },
+    "tooltip": {"field": "value", "type": "quantitative"}
+  },
+	"config": {
+		"view": {
+			"stroke": "transparent"
+		}
+	}
+}
