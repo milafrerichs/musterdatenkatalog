@@ -1,0 +1,78 @@
+  {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "",
+	"width": "500",
+	"height": "400",
+  "data": {
+    "values": [
+      {"group": "Bevölkerung - Demografie", "bar": "Sum of has", "y": 35},
+      {"group": "Infrastruktur - Straßen", "bar": "Sum of has", "y": 33},
+      {
+        "group": "Wahlen - Wahlergebnis Bundestagswahlen",
+        "bar": "Sum of has",
+        "y": 32
+      },
+      {"group": "Bevölkerung - Vornamen", "bar": "Sum of has", "y": 30},
+      {"group": "Bevölkerung - Einwohnerzahl", "bar": "Sum of has", "y": 30},
+      {
+        "group": "Wahlen - Wahlergebnis Landtagswahlen",
+        "bar": "Sum of has",
+        "y": 29
+      },
+      {
+        "group": "Bevölkerung - Staatsangehörigkeit",
+        "bar": "Sum of has",
+        "y": 25
+      },
+      {"group": "Wirtschaft - Meldungen", "bar": "Sum of has", "y": 22},
+      {"group": "Individualverkehr - Bußgelder", "bar": "Sum of has", "y": 19},
+      {"group": "Friedhöfe - Grabstätten", "bar": "Sum of has", "y": 16},
+      {"group": "Raumordnung - Stadtgebiet", "bar": "Sum of has", "y": 13},
+      {
+        "group": "Öffentlichkeitsarbeit - Information",
+        "bar": "Sum of has",
+        "y": 12
+      },
+      {
+        "group": "Kindertageseinrichtungen - Kindertagestätten",
+        "bar": "Sum of has",
+        "y": 11
+      },
+      {
+        "group": "Wahlen - Wahlergebnis Europawahlen",
+        "bar": "Sum of has",
+        "y": 11
+      },
+      {"group": "Schulen - Einrichtungen", "bar": "Sum of has", "y": 10},
+      {"group": "Kultur - Veranstaltungen", "bar": "Sum of has", "y": 10},
+      {"group": "Bevölkerung - Arbeit", "bar": "Sum of has", "y": 9},
+      {"group": "Schulen - Schülerzahlen", "bar": "Sum of has", "y": 9},
+      {
+        "group": "Wahlen - Wahlergebnis Kommunalwahlen",
+        "bar": "Sum of has",
+        "y": 9
+      },
+      {
+        "group": "Infrastruktur - WLAN und Mobilfunk",
+        "bar": "Sum of has",
+        "y": 9
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "group",
+      "type": "ordinal",
+      "sort": {"field": "y", "order": "descending"},
+      "title": ""
+    },
+    "x": {"field": "y", "type": "quantitative", "scale": {"padding": 10}}
+  },
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 3},
+      "encoding": {"text": {"field": "y", "type": "quantitative"}}
+    }
+  ]
+}

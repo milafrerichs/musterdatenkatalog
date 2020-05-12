@@ -3,40 +3,38 @@
 ---
 <h1 class="text-center text-4xl">Musterdatenkatalog - Report</h1>
 
-<div class="mt-8 w-2/3 mx-auto p-4 bg-gray-400">
+<div class="mt-8 p-4 bg-gray-400">
 	Was ist der Musterdatenkatalog?
 </div>
 
-<div class="px-2 mt-8">
-	<div class="flex -mx-2">
-		<div class="w-1/3 pr-2">
-			<div class="bg-gray-200 py-6">
-				<div class="text-6xl text-center text-gray-800 font-bold">
-					313
-				</div>
-				<div class="text-sm text-center text-gray-600 font-light">
-					Musterdatensätze
-				</div>
+<div class="mt-8 flex bg-gray-200">
+	<div class="w-1/3">
+		<div class=" py-6">
+			<div class="text-6xl text-center text-gray-800 font-bold">
+				313
+			</div>
+			<div class="text-sm text-center text-gray-600 font-light">
+				Musterdatensätze
 			</div>
 		</div>
-		<div class="w-1/3 px-2">
-			<div class="bg-gray-200 py-6">
-				<div class="text-6xl text-center text-gray-800 font-bold">
-					39
-				</div>
-				<div class="text-sm text-center text-gray-600 font-light">
-					Kommunen in NRW
-				</div>
+	</div>
+	<div class="w-1/3">
+		<div class="py-6">
+			<div class="text-6xl text-center text-gray-800 font-bold">
+				39
+			</div>
+			<div class="text-sm text-center text-gray-600 font-light">
+				Kommunen in NRW
 			</div>
 		</div>
-		<div class="w-1/3 px-2">
-			<div class="bg-gray-200 py-6">
-				<div class="text-6xl text-center text-gray-800 font-bold">
-					2370
-				</div>
-				<div class="text-sm text-center text-gray-600 font-light">
-					Datensätze
-				</div>
+	</div>
+	<div class="w-1/3">
+		<div class="py-6">
+			<div class="text-6xl text-center text-gray-800 font-bold">
+				2370
+			</div>
+			<div class="text-sm text-center text-gray-600 font-light">
+				Datensätze
 			</div>
 		</div>
 	</div>
@@ -46,6 +44,23 @@
 		{{<viz data="viz/potential" id="staedte-potential" >}}
 	</div>
 	<div class="w-1/2">
-		{{<viz data="viz/staedte-musterdatensaetze" id="staedte-md" >}}
+		{{<viz data="viz/staedte-datensaetze" id="staedte-md" >}}
+	</div>
+</div>
+<div class="mt-8 p-4 bg-gray-400">
+	<h3>Was heißt Potential?</h3>
+	<h3>Was ist der Unterschied zwischen Musterdatensatz und Datensatz?</h3>
+</div>
+
+<div class="mt-8 flex">
+	<div class="w-1/2">
+	<ol>
+		{{< sorted-limit-data data="musterdaten" template="musterdaten" sort="staedte" direction="desc">}}
+	</ol>
+	</div>
+	<div class="w-1/2">
+	<ol>
+		{{< sorted-limit-data data="musterdaten" template="musterdaten" sort="staedte" direction="asc">}}
+	</ol>
 	</div>
 </div>

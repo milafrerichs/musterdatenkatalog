@@ -1,0 +1,315 @@
+MUSTERDATENSATZ,staedte,datensaetze
+Abfallwirtschaft - Abfallkalender,3,8
+Abfallwirtschaft - Abfallmengen,4,15
+Abfallwirtschaft - Abgabestellen,3,8
+Abfallwirtschaft - Beteiligungen,1,1
+Abfallwirtschaft - Betriebe,1,1
+Abfallwirtschaft - Container,5,9
+Abfallwirtschaft - Entwässerung,1,3
+Abfallwirtschaft - Gremien,1,1
+Abfallwirtschaft - Müllabfuhr,1,4
+Abfallwirtschaft - Müllgebühren,1,1
+Bau - Baufertigstellungen,1,2
+Bau - Baugenehmigungen,2,2
+Bau - Bauprojekte,3,4
+Bau - Gebäude,4,6
+Bau - Grundstückbewertung,2,8
+Behörden - Einrichtungen,6,15
+Bevölkerung - Arbeit,9,35
+Bevölkerung - Bedarfsgemeinschaften,3,4
+Bevölkerung - Demografie,35,251
+Bevölkerung - Einwohnerzahl,30,79
+Bevölkerung - Flüchtlingszahlen,1,1
+Bevölkerung - Geburten und Sterbefälle,5,13
+Bevölkerung - Integration,2,2
+Bevölkerung - Menschen mit Behinderung,1,1
+Bevölkerung - Migrationshintergrund,6,14
+Bevölkerung - Religionszugehörigkeit,5,7
+Bevölkerung - Staatsangehörigkeit,25,43
+Bevölkerung - Vornamen,30,57
+Bevölkerung - Wohnen,5,18
+Bibliotheken - Ausleihen,2,2
+Bibliotheken - Bestände,3,6
+Bibliotheken - Besucherzahlen,3,3
+Bibliotheken - Budget,1,1
+Bibliotheken - Einrichtungen,2,2
+Bibliotheken - Kennzahlen,4,5
+Bildungsträger - Einrichtungen,1,1
+Bürgerbeteiligung - Bürgerentscheid,2,3
+Bürgerbeteiligung - Bürgerhaushalt,2,4
+Bürgerbeteiligung - Information,4,5
+Bürgerbeteiligung - Umfrage,1,6
+Bürgerservice - Anliegenmanagement,4,10
+Bürgerservice - Produkte,8,22
+Bürgerservice - Telefonverzeichnis,2,46
+Bürgerservice - Termine,2,2
+Bürgerservice - Wartezeiten,2,2
+Energiewirtschaft - Energieberichte,3,6
+Energiewirtschaft - Heizung,2,2
+Energiewirtschaft - Solar,2,2
+Energiewirtschaft - Strom,1,1
+Energiewirtschaft - Wasser,1,1
+Externe Infrastruktur - Einkaufsführer,1,1
+Externe Infrastruktur - Einzelhandel,1,2
+"Externe Infrastruktur - Kirchen, Kapellen und Klöster",3,3
+Externe Infrastruktur - Märkte,5,11
+Externe Infrastruktur - Polizei,1,1
+Externe Infrastruktur - Postfilialen,1,1
+Externe Infrastruktur - Weihnachtsmärkte,1,2
+Externe Infrastruktur - Wochenmärkte,2,3
+Externe Infrastruktur - Öffnungszeiten,1,1
+Feuerwehr - Einrichtungen,4,4
+Feuerwehr - Einsätze,3,14
+Feuerwehr - Kennzahlen,2,4
+Freizeit - Bäder,4,4
+Freizeit - Einrichtungen,8,15
+Freizeit - Ferienangebot,1,1
+Freizeit - Grillplätze,1,1
+Freizeit - Notfallnummern,1,1
+Freizeit - Sitzgelegenheiten,1,1
+Friedhöfe - Ehrengräber,1,1
+Friedhöfe - Einrichtungen,3,3
+Friedhöfe - Grabstätten,16,17
+Fuhrpark - KFZ-Bestand,1,1
+Gesamtsumme,39,2370
+Geschichte - Archivbestand,3,4
+Geschichte - Entschädigungen,1,1
+Geschichte - Historische Luftaufnahmen,3,3
+Geschichte - Information,2,2
+Geschichte - Personalverzeichnis historisch,2,2
+Gesundheitseinrichtungen - Apotheken,3,3
+Gesundheitseinrichtungen - Bäder,1,1
+Gesundheitseinrichtungen - Drogenhilfe,1,1
+Gesundheitseinrichtungen - Hebammen,1,2
+Gesundheitseinrichtungen - Krankenhäuser,7,7
+Gesundheitseinrichtungen - Pflege,1,1
+Gewässer - Pegelstände,2,3
+Gewässer - Wasserflächen,3,3
+Grünflächen - Ausgleichsflächen,1,1
+Grünflächen - Baumbestand/Baumkataster,5,5
+Grünflächen - Baumfällungen,1,4
+Grünflächen - Biotopflächen,1,1
+Grünflächen - Blumenampeln,1,1
+Grünflächen - Brunnen,1,1
+Grünflächen - Grünflächen/Grünflächenkataster,4,5
+Grünflächen - Hundekottüten,3,3
+Grünflächen - Hundewiesen,2,2
+Grünflächen - Jagdbezirke,1,1
+Grünflächen - Kleingärten,1,1
+Grünflächen - Naturschutz,3,4
+Grünflächen - Parkanlagen,5,5
+Grünflächen - Urban Gardening,1,1
+Grünflächen - Waldflächen,2,2
+Haushalt - Außerplanmäßige Aufwendungen,1,2
+Haushalt - Controlling,1,6
+Haushalt - Eckdaten,5,13
+Haushalt - Einzeldarstellungen,1,1
+Haushalt - Ergebnisplan,2,5
+Haushalt - Finanzplan,2,3
+Haushalt - Förderungen,1,1
+Haushalt - Haushaltskonsolidierung,1,1
+Haushalt - Haushaltsplan,8,32
+Haushalt - Jahresabschluss,1,1
+Haushalt - Metadaten,1,3
+Haushalt - Produktbereichssummen,1,1
+Haushalt - Produktgruppen,1,1
+Haushalt - Produktpläne,1,7
+Haushalt - Satzung,1,4
+Haushalt - Sicherungskonzept,1,1
+Haushalt - Sponsoring,1,1
+Haushalt - Zuwendungen Politische Gremien,1,1
+Hochschulen - Gebäude,2,2
+Hochschulen - Studierendenzahlen,3,3
+Individualverkehr - Baustellen,3,3
+Individualverkehr - Bußgelder,19,43
+Individualverkehr - Carsharing,3,4
+Individualverkehr - Fahrzeugzulassungen,5,8
+Individualverkehr - KFZ-Bestand,3,3
+Individualverkehr - Kennzahlen,2,4
+Individualverkehr - Lärm,4,6
+Individualverkehr - Messstellen,7,35
+Individualverkehr - Messtellen,1,2
+Individualverkehr - Schwerlastverkehr,1,4
+Individualverkehr - Sondernutzungen,2,3
+Individualverkehr - Straßenverkehr,1,1
+Individualverkehr - Taxis,3,3
+Individualverkehr - Unfälle,5,17
+Infrastruktur - Adressen,4,4
+Infrastruktur - Ampelanlagen,4,5
+Infrastruktur - Autobahnanbindung,1,1
+Infrastruktur - Baustellen,1,2
+Infrastruktur - Beleuchtung,3,3
+Infrastruktur - Brücken,1,1
+Infrastruktur - Elektrotankstellen,2,3
+Infrastruktur - Fahrradstraßen,1,1
+Infrastruktur - Flughäfen,2,2
+Infrastruktur - Fußgängerzonen,1,1
+Infrastruktur - Laufstrecken,1,1
+Infrastruktur - Parkplätze,8,29
+Infrastruktur - Schiffsanlegestellen,2,2
+Infrastruktur - Straßen,33,48
+Infrastruktur - Straßenreinigung,4,6
+Infrastruktur - Tankstellen,1,1
+Infrastruktur - WLAN und Mobilfunk,9,11
+Infrastruktur - Öffentliche Toiletten,4,4
+Infrastrukur - Elektrotankstellen,2,3
+Jugend - Einrichtungen,5,6
+Justiz - Einrichtungen,2,2
+Justiz - Gesetzestexte,1,1
+Kindertageseinrichtungen - Betreuungsplätze,2,2
+Kindertageseinrichtungen - Kindertagestätten,11,17
+Kultur - Besucherzahlen,4,4
+Kultur - Denkmäler,8,13
+Kultur - Förderungen,1,1
+Kultur - Information,3,7
+Kultur - Kunstwerke,3,3
+Kultur - Lehr- und Wanderpfade,4,4
+Kultur - Veranstaltungen,10,18
+Liegenschaften - Gebäude,2,4
+Liegenschaften - Grundstücke,2,2
+Liegenschaften - Jahresberichte,2,2
+Liegenschaften - Satzungen,1,5
+Museen - Besucherzahlen,2,3
+Museen - Einrichtungen,4,5
+Musikschulen - Jahresrechnung,1,7
+Musikschulen - Teilnehmer,2,6
+Musikschulen - Unterrichtsangebot,1,1
+Open Data - Information,6,8
+Open Data - Wunschlisten,1,1
+Open Data - Zugriffe,4,9
+Personal - Stellenauschreibungen,1,1
+Personal - Stellenplan,7,15
+Politische Vertretung - Bürgermeister,1,2
+Politische Vertretung - Gremien,4,10
+Politische Vertretung - Mandatsträger,2,2
+Radverkehr - Bürgerbeteiligung,2,2
+Radverkehr - Fahrräder,3,3
+Radverkehr - Förderungen,1,1
+Radverkehr - Ladestationen,3,3
+Radverkehr - Messstellen,3,11
+Radverkehr - Radrouten,4,17
+Radverkehr - Stellplätze,6,7
+Raumordnung - Adressen,3,3
+Raumordnung - Baublockgrenzen,2,2
+Raumordnung - Bebauungspläne,4,5
+Raumordnung - Blöcke,1,3
+Raumordnung - Flächennutzungen,1,3
+Raumordnung - Hausnummern,2,3
+Raumordnung - Liegenschaftskataster,8,16
+Raumordnung - Orthofotos,2,2
+Raumordnung - Ortsteile,6,18
+Raumordnung - Postleitzahlengebiete,2,2
+Raumordnung - Sozialräume,1,2
+Raumordnung - Stadtgebiet,13,41
+Rettungsdienst - Defibrillatoren,5,7
+Rettungsdienst - Einsätze,3,3
+Rettungsdienst - Reanimationen,1,1
+Rettungsdienst - Waldrettungspunkte,2,3
+Schulen - Einrichtungen,10,16
+Schulen - Internetanbindung,1,1
+Schulen - Schulangebot,2,4
+Schulen - Schuleingangsunteruchungen,3,3
+Schulen - Schulentwicklungsplan,2,2
+Schulen - Schülerzahlen,9,37
+Schulen - Wunschschule,1,5
+Senioren - Einrichtungen,4,6
+Sicherheit - Karneval,3,8
+Sicherheit - Kriminalitätsstatistik,2,12
+Sicherheit - Notinseln,1,1
+Sicherheit - Ordnungsamt,2,2
+Sicherheit - Silvester,1,2
+Soziale Hilfen - Asylwerber,2,3
+Soziale Hilfen - Behindertenwohnheime,3,3
+Soziale Hilfen - Einrichtungen,6,21
+Soziale Hilfen - Leistungsbezieher,3,6
+Soziale Hilfen - Straßen,1,1
+Soziale Hilfen - Wohngeld,1,1
+Sport- und Spielstätten - Belegung,1,1
+Sport- und Spielstätten - Einrichtungen,8,15
+Sport- und Spielstätten - Freibäder,1,1
+Stadtarchiv - Bestände,2,2
+Stadtmarketing - Information,3,4
+Stadtmarketing - Standortentwicklung,1,1
+Stadtmarketing - Städterankings,1,1
+Stadtmarketing - Zahlen und Fakten,2,3
+Stadtplan - Stadtmodell 3D,2,2
+Stadtplan - Stadtpläne,6,8
+Stadtwerke - Ausschreibungen Vergaben,1,1
+Stadtwerke - Beteiligungen,1,1
+Stadtwerke - Immobilienangebote,1,1
+Stadtwerke - Information,1,1
+Stadtwerke - Kennzahlen,2,2
+Stadtwerke - Verkäufe,1,1
+Steuern und Abgaben - Hundesteuer,2,7
+Steuern und Abgaben - Nettoeinnahmen,3,3
+Theater - Besucherzahlen,2,2
+Tiefbau - Geschäftsberichte,1,3
+Tourismus - Campingplätze,1,2
+Tourismus - Gästezahlen,1,1
+Tourismus - Privatunterkünfte,3,4
+Tourismus - Sehenswürdigkeiten,7,9
+Tourismus - Stadtführungen,1,1
+Tourismus - Übernachtungen,3,5
+Umweltschutz - Grundwasser,1,1
+Umweltschutz - Klimabilanz,3,3
+Umweltschutz - Messstellen,2,11
+Umweltschutz - Nachhaltigkeit,1,1
+Umweltschutz - Trinkwasser,2,2
+Umweltschutz - Umweltzonen,5,6
+"Vereine, Verbände - Einrichtungen",4,7
+Volkshochschulen - Information,1,2
+Volkshochschulen - Programm,3,7
+Volkshochschulen - Teilnehmer,1,1
+Volkshochschulen - Veranstaltungen,1,2
+Wahlen - Kandidatenlisten,1,2
+Wahlen - Kommunalwahl,3,6
+Wahlen - Straßen,2,3
+Wahlen - Testdatensätze,1,1
+Wahlen - Wahlbeteiligung Bundestagswahlen,1,1
+Wahlen - Wahlbeteiligung Kommunalwahlen,1,2
+Wahlen - Wahlbezirke,6,12
+Wahlen - Wahlergebnis Beiratswahlen,3,4
+Wahlen - Wahlergebnis Bundestagswahlen,32,56
+Wahlen - Wahlergebnis Europawahlen,11,22
+Wahlen - Wahlergebnis Kommunalwahlen,9,63
+Wahlen - Wahlergebnis Landtagswahlen,29,53
+Wahlen - Wahlergebnis Verbundwahlen,1,3
+Wahlen - Wahlkreise,6,13
+Wahlen - Wahllokale,6,14
+Website - Zugriffe,5,111
+Wetter - Hitze,2,2
+Wetter - Messstellen,2,3
+Wirtschaft - Büroflächen,1,2
+Wirtschaft - Industrie- und Gewerbeflächen,2,3
+Wirtschaft - Meldungen,22,26
+Wirtschaft - Wirtschaftsförderung,1,1
+Wirtschaft - Wirtschaftsstandorte,2,2
+Wohnen - Bauprojekte,1,1
+Wohnen - Flächengrößen,1,1
+Wohnen - Flüchtlingsunterbringung,1,3
+Wohnen - Information,3,3
+Wohnen - Sozialräume,1,1
+Wohnen - Studentenwohnheime,1,1
+Wohnen - Wohnen,4,4
+Wohnen - Wohnplätze,2,2
+Wohnen - Wohnquartiere,2,4
+Wohnen - Wohnungseigentum,1,1
+Wohnen - geförderter Wohnbau,1,2
+Zivil- und Katastrophenschutz - Kampfmittelfunde,2,3
+Zivil- und Katastrophenschutz - Sirenen,3,3
+ÖPNV - Aufzüge und Rolltreppen,1,2
+ÖPNV - Befragung,1,2
+ÖPNV - Fahrgastzahlen,2,3
+ÖPNV - Haltestellen,3,4
+ÖPNV - Liniennetz,3,3
+ÖPNV - Sollfahrdaten,1,2
+ÖPNV - Verkehrsnetz,2,3
+ÖPNV - Vertriebsstellen,2,3
+ÖPNV- Haltestellen,1,1
+Öffentliche Wirtschaft - Ausschreibungen Vergaben,2,2
+Öffentliche Wirtschaft - Beteiligungen,3,21
+Öffentlichkeitsarbeit - Amtsblatt,1,1
+Öffentlichkeitsarbeit - Ehrenbürger,1,1
+Öffentlichkeitsarbeit - Fotos,1,1
+Öffentlichkeitsarbeit - Information,12,31
+Öffentlichkeitsarbeit - Pressemitteilungen,3,4

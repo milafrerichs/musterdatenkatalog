@@ -1,0 +1,7 @@
+{{ $limit := .Get "limit" | default 5 }}
+{{ $direction := .Get "direction" | default "desc" }}
+{{ $template := .Get "template" }}
+{{ $context := . }}
+{{ range first $limit (sort (index $.Site.Data (.Get "data")) (.Get "sort") $direction) }}
+	{{ partial $template (dict "context" $context "data" .) }}
+{{end}}
