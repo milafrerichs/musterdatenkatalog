@@ -1,0 +1,23 @@
+<div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+	<div class="flex-shrink-0">
+		<a href="{{ .RelPermalink}}" class="no-underline">
+			<img class="h-48 w-full object-cover" src="/images/{{ .Params.name }}.jpg" alt="" />
+		</a>
+	</div>
+	<div class="flex-1 bg-white p-6 flex flex-col justify-between">
+		<div class="flex-1">
+			<p class="text-sm leading-5 font-medium text-indigo-600">
+			<a href="{{ .RelPermalink}}" class="hover:underline">
+				{{ .Title}}
+			</a>
+			</p>
+			<h3 class="mt-2 text-2xl leading-7 font-semibold text-gray-900">
+				{{ .Params.musterdaten}} <span class="font-light">/ 313</span>
+			</h3>
+			<div class="text-base text-gray-700 font-light mt-1">Musterdatensätzen</div>
+			<p class="mt-3 text-base leading-6 text-gray-500">
+			<b class="">{{ .Params.datasets}}</b> Datensätze
+			</p>
+		</div>
+	</div>
+</div>

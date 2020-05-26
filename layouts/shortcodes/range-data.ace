@@ -1,0 +1,4 @@
+{{ $sep := ","  }}
+{{ range $i, $r := getCSV $sep "data/musterdaten.csv"  }}
+	{{ partial "musterdaten" $r }}
+{{end}}

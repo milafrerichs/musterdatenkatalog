@@ -1,5 +1,5 @@
 ---
-
+title: "Musterdatenkatalog"
 ---
 <h1 class="text-center text-4xl">Musterdatenkatalog - Report</h1>
 
@@ -60,7 +60,8 @@
 	</div>
 	<div class="w-1/2">
 	<ol>
-		{{< sorted-limit-data data="musterdaten" template="musterdaten" sort="staedte" direction="asc">}}
+		{{< sorted-limit-data data="musterdaten" template="datensaetze" sort="datensaetze" direction="desc">}}
 	</ol>
 	</div>
 </div>
+{{< cities >}}

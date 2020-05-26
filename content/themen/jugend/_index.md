@@ -1,0 +1,4 @@
+---
+name: jugend
+title: Jugend
+---

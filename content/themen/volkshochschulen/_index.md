@@ -1,0 +1,4 @@
+---
+name: volkshochschulen
+title: Volkshochschulen
+---

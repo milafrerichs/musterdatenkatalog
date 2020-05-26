@@ -1,0 +1,10 @@
+{{ $city := .city }}
+{{ $context := .context}}
+
+{{ $city_musterdaten := index (where $context.Site.Data.musterdaten_city "stadt" $city) }}
+
+.bg-white.shadow.overflow-hidden.sm:rounded-md.mt-8
+  ul.list-none
+  {{ range sort $city_musterdaten "musterdatensatz"}}
+    {{ partial "musterdatensatz" (dict "context" $context "city" .) }}
+  {{end}}

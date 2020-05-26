@@ -1,0 +1,4 @@
+---
+name: theater
+title: Theater
+---

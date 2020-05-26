@@ -1,0 +1,77 @@
+{{ $context := .context}}
+{{ $city := .city }}
+
+{{ $sumVorhanden := 0 }}
+{{ $themen_city := "" }}
+{{ with $context.Site.GetPage "/themen"  }}
+.bg-white.shadow.overflow-hidden.sm:rounded-md.mt-8
+  ul.list-none
+    {{ range $index, $element := (sort .Pages "Params.name" "asc") }}
+    {{ with $element }}
+      {{ $thema := .Title }}
+      {{ $sumVorhanden = 0 }}
+      {{ $themen_city = index (where (where $context.Site.Data.thema_musterdaten_city "stadt" $city) "thema" .Title) }}
+      {{ range $themen_city}}
+      {{ $sumVorhanden = add $sumVorhanden .vorhanden }}
+      {{end}}
+      {{ if .Title }}
+      li.list-none.border-t.border-gray-400.first:border-t-0.bg-gray-200.cursor-pointer x-data="{ open: {{if eq $index 0}}true{{else}}false{{end}} }"
+        .flex.items-center.px-4.py-4.sm:px-6 @click="open = !open"
+          .min-w-0.flex-1.flex.items-center
+            .min-w-0.flex-1.sm:justify-between.sm:items-center.sm:flex
+              div.flex.items-center
+                {{ if ge $sumVorhanden (len .Pages)}}
+                  {{ partial "checkbox" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-green-400" ) }}
+                {{ else }}
+                  {{ partial "exclamation" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-orange-400" ) }}
+                {{end}}
+                .px-4.text-lg.leading-5.font-medium.text-gray-700.truncate {{.Title}} ({{$sumVorhanden}} / {{(len .Pages)}})
+          div
+            {{ partial "cheveron" (dict "classes" "h-5 w-5 text-gray-400" ) }}
+        ul.list-none.ml-2 class="" x-show="open"
+          {{ range $subindex, $subelement := (sort .Pages "Title" "asc") }}
+          {{ with $subelement }}
+            {{ $musterdaten_city := index (where (where (where $context.Site.Data.thema_musterdaten_city "stadt" $city) "thema" $thema) "bezeichnung" .Title) 0 }}
+            li.list-none.border-t.border-gray-200.first:border-t-0.bg-white.cursor-pointer x-data="{ subopen: {{if eq $subindex 0}}true{{else}}false{{end}} }"
+              .flex.items-center.px-4.py-2.sm:px-6 @click="subopen = !subopen"
+                .min-w-0.flex-1.flex.items-center
+                  {{ if $musterdaten_city }}
+                    {{ if gt (index $musterdaten_city "vorhanden") 0 }}
+                      {{ partial "checkbox" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-green-400" ) }}
+                      {{ else }}
+                        {{ partial "exclamation" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-orange-400" ) }}
+                    {{ end  }}
+                  {{ end  }}
+                  .px-2.text-lg.leading-5.font-medium.text-gray-600.truncate {{.Title}}
+                div
+                  {{ partial "cheveron" (dict "classes" "h-5 w-5 text-gray-400" ) }}
+              div.pl-16 x-show="subopen"
+                {{ if $musterdaten_city }}
+                {{ $musterdatensatz := index $musterdaten_city "MUSTERDATENSATZ"}}
+                {{ $daten := index (first 3 (sort (where $context.Site.Data.datensaetze "MUSTERDATENSATZ" $musterdatensatz) "dct:title" "asc")) }}
+                {{ if gt (index $musterdaten_city "datensaetze") 0 }}
+                  {{ $daten = index (where (where $context.Site.Data.datensaetze "ORG" $city ) "MUSTERDATENSATZ" $musterdatensatz) }}
+                  .text-xs
+                    | {{$city}} hat {{(index $musterdaten_city "datensaetze")}} 
+                    | {{ if gt (index $musterdaten_city "datensaetze") 1 }}Datensätze{{else}}Datensatz{{end}} veröffentlicht:
+                {{else}}
+                  .text-xs
+                    | Beispiele aus anderen Städten:
+                {{ end }}
+                ul.list-none
+                  {{ range $daten }}
+                    li.list-none.border-t.border-gray-200.first:border-t-0.bg-white
+                      .flex.items-center.py-2.justify-between
+                        .pr-4.text-lg.leading-5.font-light.text-gray-700.truncate {{index . "dct:title"}}
+                        {{ if lt (index $musterdaten_city "datensaetze") 1 }}
+                          .pr-4.text-lg.leading-5.font-light.text-gray-400.truncate {{index . "ORG"}}
+                        {{end}}
+                  {{end}}
+                  {{ end }}
+          {{ end  }}
+          {{ end  }}
+        {{ end  }}
+    {{ end  }}
+  {{ end  }}
+  {{ end  }}
+

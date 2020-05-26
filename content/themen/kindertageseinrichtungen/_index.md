@@ -1,0 +1,4 @@
+---
+name: kindertageseinrichtungen
+title: Kindertageseinrichtungen
+---

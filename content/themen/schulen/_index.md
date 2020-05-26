@@ -1,0 +1,4 @@
+---
+name: schulen
+title: Schulen
+---

@@ -1,0 +1,45 @@
+= content nav
+  {{ partial "nav" . }}
+= content main
+  .font-sans.text-lg.text-grey-800.spaced-y-6.leading-normal
+    .bg-white.shadow.overflow-hidden.sm:rounded-lg
+      .px-4.py-5.border-b.border-gray-200.sm:px-6
+        .flex.items-center
+          img class="h-24 w-24 rounded-full" src="/images/{{ .Params.name }}.jpg" alt=""
+          .ml-4
+            h3.text-4xl.leading-6.font-medium.text-gray-900 {{.Title}}
+      .grid.grid-cols-1.bg-white.overflow-hidden.md:grid-cols-3
+        .bg-white.overflow-hidden
+          .px-4.py-5.sm:p-6
+            dl
+              dt.text-sm.leading-5.font-medium.text-gray-500.truncate
+                | Musterdatensätze
+              dd.mt-1.text-3xl.leading-9.font-semibold.text-gray-900
+                | {{.Params.musterdaten}}
+        .border-t.border-gray-200.md:border-0.md:border-l
+          .px-4.py-5.sm:p-6
+            dl
+              dt.text-sm.leading-5.font-medium.text-gray-500.truncate
+                | Datensätze
+              dd.mt-1.text-3xl.leading-9.font-semibold.text-gray-900
+                | {{.Params.datasets}}
+        .border-t.border-gray-200.md:border-0.md:border-l
+          .px-4.py-5.sm:p-6
+            dl
+              dt.text-sm.leading-5.font-medium.text-gray-500.truncate
+                | Potential
+              dd.mt-1.text-3xl.leading-9.font-semibold.text-gray-900
+                | {{.Params.potential}}
+
+    .flex.flex-row.mt-8
+      .py-2.flex.flex-row.items-center
+        .mr-2
+          {{ partial "checkbox" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-green-400" ) }}
+        .items-center Daten vorhanden
+      .py-2.flex.flex-row.ml-8.items-center
+        .mr-2
+          {{ partial "exclamation" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-orange-400" ) }}
+        .items-center Potential Daten zu veröffentlichen
+    {{ partial "thema" (dict "context" . "city" .Title )}}
+= content footer
+  {{ partial "footer" . }}

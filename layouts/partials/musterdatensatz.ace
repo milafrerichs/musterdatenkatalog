@@ -1,0 +1,37 @@
+{{ $city := .city }}
+{{ $context := .context}}
+{{ with $city }}
+li.list-none.border-t.border-gray-200.first:border-t-0
+  a.block.hover:bg-gray-50.focus:outline-none.focus:bg-gray-50.transition.duration-150.ease-in-out href="#" 
+  .flex.items-center.px-4.py-4.sm:px-6
+    .min-w-0.flex-1.flex.items-center
+      .min-w-0.flex-1.sm:justify-between.sm:items-center.sm:flex
+        div.flex.items-center
+          {{ if gt .vorhanden 0 }}
+            svg class="flex-shrink-0 mr-1.5 h-12 w-12 text-green-400" fill="currentColor" viewBox="0 0 20 20"
+              path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"
+          {{ else }}
+            svg class="flex-shrink-0 mr-1.5 h-12 w-12 text-red-400" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"
+              path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"
+          {{ end }}
+          .px-4.text-lg.leading-5.font-medium.text-gray-700.truncate {{.musterdatensatz}}
+        .hidden.md:block.mt-4.flex-shrink-0.sm:mt-0
+          div.flex
+            {{ if gt .datensaetze 0 }}
+            .flex.items-center.text-sm.leading-5.text-gray-500
+              | {{ .datensaetze }} {{ if gt .datensaetze 1 }}Datensätze{{else}}Datensatz{{end}}
+            div
+              svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"
+            {{ end }}
+  .bg-gray-200.p-4.hidden
+  {{ $daten := "" }}
+  {{ if gt .datensaetze 0 }}
+    {{ $daten = index (where (where $context.Site.Data.datensaetze "ORG" .stadt ) "MUSTERDATENSATZ" .musterdatensatz) }}
+  {{else}}
+    {{ $daten = index (first 3 (sort (where $context.Site.Data.datensaetze "MUSTERDATENSATZ" .musterdatensatz) "dct:title" "asc")) }}
+  {{ end }}
+    {{ range $daten }}
+    {{index . "dct:title"}}
+    {{end}}
+{{ end }}

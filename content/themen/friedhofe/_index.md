@@ -1,0 +1,4 @@
+---
+name: friedhofe
+title: Friedhöfe
+---

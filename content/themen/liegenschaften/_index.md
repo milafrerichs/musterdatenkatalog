@@ -1,0 +1,4 @@
+---
+name: liegenschaften
+title: Liegenschaften
+---

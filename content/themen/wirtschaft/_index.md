@@ -1,0 +1,4 @@
+---
+name: wirtschaft
+title: Wirtschaft
+---

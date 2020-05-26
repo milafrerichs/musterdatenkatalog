@@ -1,9 +1,12 @@
 module.exports = {
+  variants: {
+    borderWidth: ['responsive', 'first', 'hover', 'focus'],
+  },
   theme: {
     extend: {
       colors: {
         civic: '#2b4c7e',
-        orange: '#c7850c',
+        civic_accent: '#c7850c',
       },
       maxWidth: theme => {
         return {

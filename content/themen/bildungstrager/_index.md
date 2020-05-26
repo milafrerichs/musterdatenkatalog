@@ -1,0 +1,4 @@
+---
+name: bildungstrager
+title: Bildungsträger
+---

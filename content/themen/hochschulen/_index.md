@@ -1,0 +1,4 @@
+---
+name: hochschulen
+title: Hochschulen
+---
