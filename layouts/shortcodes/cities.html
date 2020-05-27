@@ -1,0 +1,12 @@
+<div class="relative bg-gray-50 pt-16 pb-20 lg:pt-24 lg:pb-28">
+	<a href="" class="text-base font-light p-4 rounded border border-gray-300 bg-gray-200 shadow-inner">A-Z</a>
+	<a href="" class="text-base font-light p-4 rounded border border-gray-500 bg-gray-500 text-white">Musterdatensätze</a>
+	<a href="" class="text-base font-light p-4 rounded border border-gray-500 bg-gray-500 text-white">Datensätze</a>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+			{{ range (where $.Site.RegularPages "Section" "cities") }}
+				{{ partial "city" . }}
+			{{ end }}
+    </div>
+  </div>
+</div>
