@@ -40,6 +40,6 @@
         .mr-2
           {{ partial "exclamation" (dict "classes" "flex-shrink-0 mr-1.5 h-8 w-8 text-orange-400" ) }}
         .items-center Potential Daten zu veröffentlichen
-    {{ partial "thema" (dict "context" . "city" .Title )}}
+    {{ partial "thema-city" (dict "context" . "city" .Title )}}
 = content footer
   {{ partial "footer" . }}
