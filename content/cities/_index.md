@@ -1,7 +1,9 @@
 ---
-title: Articles
-type: page
+title: Städte
+menu:
+  main:
+    weight: 10
 ---
-# Articles
+# Städte
 
 

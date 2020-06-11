@@ -1,6 +1,12 @@
 module.exports = {
   variants: {
     borderWidth: ['responsive', 'first', 'hover', 'focus'],
+    margin: ['responsive', 'first', 'hover', 'focus'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    overflow: ['responsive', 'first', 'hover', 'focus'],
+    position: ['responsive', 'hover', 'focus'],
+    wordBreak: ['responsive', 'hover', 'focus'],
+    whitespace: ['responsive', 'hover', 'focus'],
   },
   theme: {
     extend: {
@@ -12,6 +18,8 @@ module.exports = {
         return {
           'screen-xl': theme('screens.xl'),
           'testimonial': '100px',
+          '1/4': '25%',
+          '1/3': '33%'
         }
       },
     }

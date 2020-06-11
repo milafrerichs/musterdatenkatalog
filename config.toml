@@ -6,4 +6,4 @@ enableEmoji = true
 [params]
 description = ""
 cloudinary_url = "https://res.cloudinary.com/civicvision/image/upload"
-mainSections = ["articles", "services"]
+mainSections = ["cities", "themen"]
