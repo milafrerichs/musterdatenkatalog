@@ -3,7 +3,7 @@
 
 {{ $sumVorhanden := 0 }}
 {{ $themen_city := "" }}
-{{ with $context.Site.GetPage "/themen"  }}
+{{ with $context.Pages  }}
 .bg-white.shadow.overflow-hidden.sm:rounded-md.mt-8
   ul.list-none
     {{ range $index, $element := (sort .Pages "Params.name" "asc") }}

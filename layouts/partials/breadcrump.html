@@ -1,0 +1,14 @@
+<nav class="hidden sm:flex items-center text-sm leading-5 font-medium">
+  {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+</nav>
+{{ define "breadcrumbnav" }}
+{{ if .p1.Parent }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+<svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+</svg>
+{{ else if not .p1.IsHome }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+{{ end }}
+<a href="{{ .p1.Permalink }}" class="{{ if eq .p1 .p2 }} {{end}} text-gray-500 hover:text-gray-700 transition duration-150 ease-in-out">{{ .p1.Title }}</a>
+{{ end }}

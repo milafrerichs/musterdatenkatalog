@@ -6,7 +6,8 @@
   "dependencies": {
     "postcss-cli": "^7",
     "tailwind-heropatterns": "0.0.8",
-    "tailwindcss-spaced-items": "^0.1.0"
+    "tailwindcss-spaced-items": "^0.1.0",
+    "alpinejs": "^2.3.0"
   },
   "scripts": {
     "start": "hugo --gc"

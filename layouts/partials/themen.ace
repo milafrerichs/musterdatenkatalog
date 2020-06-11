@@ -1,0 +1,33 @@
+.grid.gap-5.max-w-lg.mx-auto.lg:grid-cols-2.lg:max-w-none
+  {{ range .Pages }}
+    {{ $themen_stats := index (where .Site.Data.thema_stats "thema" .Title) 0 }}
+    .mt-8.w-full
+      .bg-white.shadow.overflow-hidden.sm:rounded-lg
+        .px-4.py-5.border-b.border-gray-200.sm:px-6
+          .flex.items-center
+            h3.text-2xl.leading-6.font-medium.text-gray-900 
+              a href="{{.Permalink}}" {{.Title}}
+        .grid.grid-cols-1.bg-white.overflow-hidden.md:grid-cols-3
+          .bg-white.overflow-hidden
+            .px-4.py-5.sm:p-6
+              dl
+                dt.text-xs.leading-5.font-medium.text-gray-500.truncate
+                  | Musterdatensätze
+                dd.mt-1.text-3xl.leading-9.font-semibold.text-gray-900
+                  | {{.Pages | len}}
+          .border-t.border-gray-200.md:border-0.md:border-l
+            .px-4.py-5.sm:p-6
+              dl
+                dt.text-xs.leading-5.font-medium.text-gray-500.truncate
+                  | Datensätze
+                dd.mt-1.text-3xl.leading-9.font-semibold.text-gray-900
+                  | {{$themen_stats.datensaetze}}
+          .border-t.border-gray-200.md:border-0.md:border-l
+            .px-4.py-5.sm:p-6
+              dl
+                dt.text-xs.leading-5.font-medium.text-gray-500.truncate
+                  | Städte
+                dd.mt-1.text-3xl.leading-9.font-semibold.text-gray-900
+                  span {{$themen_stats.staedte}} 
+                  span.text-gray-700 &nbsp;/ {{len .Site.Data.cities }}
+  {{end}}

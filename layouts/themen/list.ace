@@ -3,9 +3,12 @@
 = content main
   .font-sans.text-lg.text-grey-800.spaced-y-6.leading-normal
     {{.Content}}
-    {{ range .Pages  }}
-      {{.Title}}
-    {{ end  }}
+    {{if .Sections}}
+      {{ partial "themen" .}}
+    {{else}}
+      {{ partial "breadcrump" . }}
+      {{ partial "themen-datensaetze" .}}
+    {{end}}
 = content footer
   {{ partial "footer" . }}
 

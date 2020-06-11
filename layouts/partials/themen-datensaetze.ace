@@ -1,0 +1,34 @@
+.max-w-7xl.mx-auto.py-6
+  .max-w-none.mx-auto
+    {{ range (sort .Pages "Title" "asc") }}
+      {{ $daten := index (sort (where (where $.Site.Data.datensaetze "BEZEICHNUNG" .Title) "THEMA" .Parent.Title) "dct:title" "asc") }}
+      .bg-white.overflow-hidden.sm:rounded-lg.sm:shadow.mb-8
+        .bg-white.px-4.py-5.border-b.border-gray-200.sm:px-6
+          h3.text-lg.leading-6.font-medium.text-gray-900 {{.Title}}
+        .flex.flex-col
+          table.w-full.table-fixed
+            thead.bg-gray-200
+              tr
+                th.px-6.py-3.border-b.border-gray-200.bg-gray-50.text-left.text-xs.leading-4.font-medium.text-gray-500.uppercase.tracking-wider.w-3/6
+                  | Title
+                th.px-6.py-3.border-b.border-gray-200.bg-gray-50.text-left.text-xs.leading-4.font-medium.text-gray-500.uppercase.tracking-wider.w-1/6
+                  | Stadt
+                th.px-6.py-3.border-b.border-gray-200.bg-gray-50.text-left.text-xs.leading-4.font-medium.text-gray-500.uppercase.tracking-wider.w-1/6
+                  | Lizenz
+                th.px-6.py-3.border-b.border-gray-200.bg-gray-50.text-left.text-xs.leading-4.font-medium.text-gray-500.uppercase.tracking-wider.w-1/6
+                  | Kategorie
+            tbody.bg-white
+              {{ range $daten }}
+                tr.hover:bg-gray-100
+                  td.px-6.py-4.whitespace-no-wrap.border-b.border-gray-200.text-sm.leading-5.font-medium.text-gray-900.truncate.hover:break-normal.hover:overflow-auto.hover:bg-gray-100.hover:absolute
+                    a href="{{index . "dcat:landingPage"}}" {{ index . "dct:title" }}
+                  td.px-6.py-4.whitespace-no-wrap.border-b.border-gray-200.text-sm.leading-5.text-gray-500.truncate.hover:break-normal.hover:overflow-auto.hover:bg-gray-100.hover:absolute
+                    | {{ index . "ORG" }}
+                  td.px-6.py-4.whitespace-no-wrap.border-b.border-gray-200.text-sm.leading-5.text-gray-500.truncate.hover:break-normal.hover:overflow-auto.hover:bg-gray-100.hover:absolute
+                    | {{ index . "dcat:Distribution.dct:license" }}
+                  td.px-6.py-4.border-b.border-gray-200.text-sm.leading-5.text-gray-500.truncate.hover:break-word.hover:overflow-auto.hover:whitespace-normal
+                    span.px-2.inline-flex.text-xs.leading-5.font-semibold.rounded-full.bg-green-100.text-green-800
+                      | {{ index . "dcat:theme" }}
+              {{ end  }}
+
+      {{ end  }}
