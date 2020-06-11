@@ -1,0 +1,57 @@
+<div class="relative bg-gray-50 pt-16 pb-20 lg:pt-24 lg:pb-28" x-data="sortBy()">
+  <div class="flex">
+    {{ template "sort_button" (dict "click" "title" "active" "activeTitle" "title" "A-Z") }}
+    {{ template "sort_button" (dict "click" "datasets" "active" "activeDatasets" "title" "Datensätze") }}
+    {{ template "sort_button" (dict "click" "musterdaten" "active" "activeMusterdaten" "title" "Musterdaten") }}
+  </div>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" x-show="show('titleAsc')">
+    {{ range sort (where $.Site.RegularPages "Section" "cities") ".Title" "asc"}}
+      {{ partial "city" . }}
+    {{ end }}
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" x-show="show('title')">
+    {{ range sort (where $.Site.RegularPages "Section" "cities") ".Title" "desc" }}
+      {{ partial "city" . }}
+    {{ end }}
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" x-show="show('musterdaten')">
+    {{ range sort (where $.Site.RegularPages "Section" "cities") ".Params.musterdaten" "desc" }}
+      {{ partial "city" . }}
+    {{ end }}
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" x-show="show('musterdatenAsc')">
+    {{ range sort (where $.Site.RegularPages "Section" "cities") ".Params.musterdaten" "asc" }}
+      {{ partial "city" . }}
+    {{ end }}
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" x-show="show('datasets')">
+    {{ range sort (where $.Site.RegularPages "Section" "cities") ".Params.datasets" "desc" }}
+      {{ partial "city" . }}
+    {{ end }}
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" x-show="show('datasetsAsc')">
+    {{ range sort (where $.Site.RegularPages "Section" "cities") ".Params.datasets" "asc" }}
+      {{ partial "city" . }}
+    {{ end }}
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function sortBy() {
+  return {
+    sort: 'titleAsc',
+    title() { this.sort = this.sort === 'title' ? 'titleAsc' : 'title';},
+    musterdaten() { this.sort = this.sort === 'musterdaten' ? 'musterdatenAsc' : 'musterdaten';},
+    datasets() { this.sort = this.sort === 'datasets' ? 'datasetsAsc' : 'datasets';},
+    show(s) { return s === this.sort; },
+    activeTitle() { return this.sort === 'title' || this.sort === 'titleAsc' },
+    activeDatasets() { return this.sort === 'datasets' || this.sort === 'datasetsAsc' },
+    activeMusterdaten() { return this.sort === 'musterdaten' || this.sort === 'musterdatenAsc' },
+    asc() { return this.sort.search(/asc/i) > -1; }
+  }
+}
+</script>
+{{ define "sort_button" }}
+<button :class="{ 'bg-gray-200': {{.active}}(), 'bg-gray-500 text-white': !{{.active}}() }" x-on:click="{{.click}}" class="text-base font-light p-4 rounded border border-gray-500 bg-gray-500 text-white flex mr-4">{{.title}}<span x-show="asc()" class="mr-1">{{ partial "sort-ascending" "h-6" }}</span><span x-show="!asc()">{{ partial "sort-descending" "h-6" }}</span></button>
+{{ end }}

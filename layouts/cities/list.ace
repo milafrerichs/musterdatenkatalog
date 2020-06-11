@@ -1,0 +1,9 @@
+= content nav
+  {{ partial "nav" . }}
+= content main
+  .font-sans.text-lg.text-grey-800.spaced-y-6.leading-normal
+    {{.Content}}
+    {{ partial "cities" . }}
+= content footer
+  {{ partial "footer" . }}
+
